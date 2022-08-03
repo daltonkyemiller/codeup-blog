@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragments/head :: baseHead(title = 'Roll Dice')"></head>
+    <body>
+        <nav th:replace="fragments/nav :: baseNav"></nav>
+        <h1 class="">Hi</h1>
+        <div>
+            <a href="/roll-dice/1">Choose 1</a>
+            <a href="/roll-dice/2">Choose 2</a>
+            <a href="/roll-dice/3">Choose 3</a>
+            <a href="/roll-dice/4">Choose 4</a>
+            <a href="/roll-dice/5">Choose 5</a>
+            <a href="/roll-dice/6">Choose 6</a>
+        </div>
+    </body>
+    <footer th:replace="fragments/footer :: baseFooter"></footer>
+</html>
