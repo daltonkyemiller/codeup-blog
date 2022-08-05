@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head th:replace="fragments/head :: baseHead(title = 'Roll Dice')"></head>
+    <body>
+        <nav th:replace="fragments/nav :: baseNav"></nav>
+        <main>
+            <div th:each="product : ${products}">
+                <h1 th:text="${product.name}"></h1>
+                <h2 th:text="${product.price}"></h2>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+.posts-container {
+	align-self: center;
+	width: 75%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: var(--space-1);
+}

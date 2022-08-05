@@ -1,8 +1,15 @@
+@import "forms.css";
+
 :root {
 	--space-1: 0.25rem;
 	--space-2: 0.5rem;
 	--space-3: 1rem;
 	--space-4: 2rem;
+	--space-5: 4rem;
+
+	/* Colors */
+	--primary-color: white;
+	--secondary-color: black;
 }
 
 *,
@@ -10,6 +17,63 @@
 *::after {
 	font-family: Arial, sans-serif;
 	box-sizing: border-box;
+}
+
+html, body, main {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+}
+
+nav {
+	height: var(--nav-height);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+.list-reset {
+	list-style-type: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.hidden {
+	display: none;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.relative {
+	position: relative;
+}
+
+.flex {
+	display: flex !important;
+}
+
+.flex-col {
+	flex-direction: column !important;
+}
+
+.w10 {
+	width: 10% !important;
+}
+
+.w25 {
+	width: 25% !important;
+}
+
+.w50 {
+	width: 50% !important;
+}
+
+.w100 {
+	width: 100% !important;
 }
 
 

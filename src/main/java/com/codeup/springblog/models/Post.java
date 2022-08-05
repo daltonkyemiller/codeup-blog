@@ -8,12 +8,26 @@ import javax.persistence.*;
 @Table(name = "posts")
 public class Post {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(length = 100, nullable = false)
     private String title;
+    @Column(nullable = false)
     private String body;
 
     public Post() {
 
+    }
+
+    public Post(String title, String body) {
+        this.title = title;
+        this.body = body;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getTitle() {

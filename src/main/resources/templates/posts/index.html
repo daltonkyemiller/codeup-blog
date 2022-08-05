@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head th:replace="fragments/head :: baseHead(title = 'Roll Dice')"></head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragments/head :: baseHead(~{::title}, ~{::link})">
+        <title>Posts</title>
+        <link rel="stylesheet" href="/css/posts/index.css">
+    </head>
     <body>
         <nav th:replace="fragments/nav :: baseNav"></nav>
         <main>
-            <div th:each="post : ${posts}">
-                <h1 th:text="${post.title}"></h1>
-                <p th:text="${post.body}"></p>
+            <div class="posts-container">
+                <div th:each="post : ${posts}" class="post">
+                    <a th:href="@{'/posts/' + ${post.id}}"><h1 th:text="${post.title}"></h1></a>
+                    <p th:text="${post.body}"></p>
+                </div>
             </div>
         </main>
     </body>

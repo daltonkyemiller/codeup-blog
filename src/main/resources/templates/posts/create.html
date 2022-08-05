@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragments/head :: baseHead(~{::title}, ~{})">
+        <title>Create Post</title>
+    </head>
+    <body>
+        <nav th:replace="fragments/nav :: baseNav"></nav>
+        <main>
+            <form action="/posts/create" method="post" class="w50 self-center">
+                <label for="title">Title
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Title" th:value="${title}">
+                </label>
+                <label for="body">Body
+                    <textarea th:text="${body}" class="form-control" id="body" name="body" placeholder="Content"></textarea>
+                </label>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>
