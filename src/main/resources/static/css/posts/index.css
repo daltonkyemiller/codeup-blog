@@ -5,3 +5,10 @@
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-gap: var(--space-1);
 }
+
+.post {
+	background-color: var(--color-primary);
+	padding: var(--space-3);
+	color: var(--color-secondary);
+	min-height: 300px;
+}

@@ -15,7 +15,7 @@ textarea {
 	width: 100%;
 	padding: var(--space-3);
 	border: none;
-	border-bottom: 3px solid var(--secondary-color);
+	border-bottom: 3px solid var(--color-secondary);
 	transition: all 0.25s ease-in-out, height 1ms;
 }
 
@@ -26,19 +26,19 @@ input[type="url"]:focus,
 input[type="tel"]:focus,
 textarea:focus {
 	outline: none;
-	border-bottom-width: 10px;
+	border-bottom-width: 5px;
 }
 
 textarea {
-	border: 3px solid var(--secondary-color) !important;
+	border: 3px solid var(--color-secondary) !important;
 	resize: vertical;
 }
 
 textarea:focus {
-	border-bottom-width: 10px !important;
-	border-top-width: 10px !important;
-	border-left-width: 10px !important;
-	border-right-width: 10px !important;
+	border-bottom-width: 5px !important;
+	border-top-width: 5px !important;
+	border-left-width: 5px !important;
+	border-right-width: 5px !important;
 }
 
 input[type="submit"],
@@ -52,6 +52,6 @@ button {
 
 input[type="submit"]:hover,
 button:hover {
-	background-color: var(--secondary-color);
-	color: var(--primary-color);
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
 }

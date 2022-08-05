@@ -7,6 +7,10 @@
         <nav th:replace="/fragments/nav :: baseNav"></nav>
         <main>
             <h1 th:text="${post.title}"></h1>
+            <p>
+                Created By: <span th:text="${post.owner.username}"/> | <a th:href="@{mailto:{email}(email = ${post.owner.email})}"
+                                                                          th:text="${post.owner.email}"></a>
+            </p>
             <p th:text="${post.body}"></p>
         </main>
     </body>
