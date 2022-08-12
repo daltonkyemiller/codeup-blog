@@ -6,12 +6,12 @@
     <body>
         <nav th:replace="fragments/nav :: baseNav"></nav>
         <main>
-            <form action="/posts/create" method="post" class="w50 self-center">
+            <form th:action="@{/posts/create}" method="post" class="w50 self-center">
                 <label for="title">Title
-                    <input type="text" class="form-control" id="title" name="title" placeholder="Title" th:value="${title}">
+                    <input type="text" class="form-control" id="title" placeholder="Title" name="title" th:value="${title}">
                 </label>
                 <label for="body">Body
-                    <textarea th:text="${body}" class="form-control" id="body" name="body" placeholder="Content"></textarea>
+                    <textarea th:text="${body}" name="body" class="form-control" id="body" placeholder="Content"></textarea>
                 </label>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

@@ -8,9 +8,14 @@
         <nav th:replace="fragments/nav :: baseNav"></nav>
         <main>
             <div class="grid grid-cols-auto-fill g-3">
-                <div th:each="post : ${posts}" class="shadow-xl p-4 rounded-2xl">
+                <div th:each="post : ${posts}" class="shadow-xl p-4 rounded-2xl flex flex-col g-2">
                     <a th:href="@{'/posts/' + ${post.id}}"><h1 th:text="${post.title}"></h1></a>
                     <p th:text="${post.body}"></p>
+                    <div class="flex g-1">
+                        <span th:each="tag : ${post.tags}" class="flex g-1">
+                            <a th:href="@{/posts/tag/{tag}(tag=${tag.name})}" th:text="${tag.name}"></a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </main>

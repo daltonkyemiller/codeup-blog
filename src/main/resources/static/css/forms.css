@@ -15,7 +15,7 @@ textarea {
 	width: 100%;
 	padding: var(--space-3);
 	border: none;
-	border-bottom: 3px solid var(--color-secondary);
+	border-bottom: 3px solid var(--text-secondary);
 	transition: all 0.25s ease-in-out, height 1ms;
 }
 
@@ -30,7 +30,7 @@ textarea:focus {
 }
 
 textarea {
-	border: 3px solid var(--color-secondary) !important;
+	border: 3px solid var(--text-secondary) !important;
 	resize: vertical;
 }
 
@@ -52,6 +52,6 @@ button {
 
 input[type="submit"]:hover,
 button:hover {
-	background-color: var(--color-secondary);
-	color: var(--color-primary);
+	background-color: var(--text-secondary);
+	color: var(--text-primary);
 }
